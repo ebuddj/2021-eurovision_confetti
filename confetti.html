@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src="./js/confetti.js"></script>
+  <script src="./js/moment.min.js"></script>
+  <script src="./js/moment-timezone-with-data.min.js"></script>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+  let eurovision_time = moment().tz("Europe/Zurich").format();
+  // This is for testing
+  // if (eurovision_time > '2021-05-21T10:00:00+03:00' && eurovision_time < '2021-05-23T03:00:00+03:00') {
+    
+  // Show between 22.5. 19:00 and 23.5. 03:00
+  if (eurovision_time > '2021-05-22T19:00:00+03:00' && eurovision_time < '2021-05-23T03:00:00+03:00') {
+    startConfetti();
+    setTimeout(function() {
+      stopConfetti(); 
+    }, 3000); // End after 3 seconds.
+  }
+</script>
+</html>
